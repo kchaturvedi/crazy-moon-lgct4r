@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className='max-w-4xl mx-auto justify-center p-8'>
+      <div className='max-w-4xl mx-auto justify-center p-4'>
         <h1 className='text-3xl mb-8 text-center'>Hello Marta</h1>
         <div className='flex flex-col md:flex-row mx-auto justify-center gap-4 text-xl'>
           <select className='w-full md:w-1/3' name='station' id='station' onChange={(e) => setStation(e.target.value)}>
