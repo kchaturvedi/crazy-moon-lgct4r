@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 .border-gold {
-  @apply border-t-amber-400;
+  border-top-color: #fbbf24;
 }
 .border-green {
-  @apply border-t-green-400;
+  border-top-color: #4ade80;
 }
 .border-blue {
-  @apply border-t-blue-400;
+  border-top-color: #60a5fa;
 }
 .border-red {
-  @apply border-t-red-400;
+  border-top-color: #f87171;
 }
 .border-gray {
-  @apply border-t-gray-400;
+  border-top-color: #9ca3af;
 }
