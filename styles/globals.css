@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.border-gold {
+  @apply border-t-amber-400;
+}
+.border-green {
+  @apply border-t-green-400;
+}
+.border-blue {
+  @apply border-t-blue-400;
+}
+.border-red {
+  @apply border-t-red-400;
+}
+.border-gray {
+  @apply border-t-gray-400;
+}
