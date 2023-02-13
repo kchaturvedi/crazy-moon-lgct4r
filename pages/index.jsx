@@ -58,59 +58,41 @@ export default function Home() {
 
   return (
     <main>
-      <div className="m-8 max-w-4xl mx-auto justify-center">
-        <h1 className="text-3xl mb-8 text-center">Hello Marta</h1>
-        <div className="flex mx-auto justify-center gap-4 text-xl">
-          <select
-            className="w-1/3"
-            name="station"
-            id="station"
-            onChange={(e) => setStation(e.target.value)}
-          >
-            <option value="">All Stations</option>
+      <div className='max-w-4xl mx-auto justify-center p-8'>
+        <h1 className='text-3xl mb-8 text-center'>Hello Marta</h1>
+        <div className='flex flex-col md:flex-row mx-auto justify-center gap-4 text-xl'>
+          <select className='w-full md:w-1/3' name='station' id='station' onChange={(e) => setStation(e.target.value)}>
+            <option value=''>All Stations</option>
             {allStations.map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>
             ))}
           </select>
-          <select
-            name="station"
-            id="station"
-            onChange={(e) => setLine(e.target.value)}
-          >
-            <option value="">All Lines</option>
+          <select name='station' id='station' onChange={(e) => setLine(e.target.value)}>
+            <option value=''>All Lines</option>
             {allLines.map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>
             ))}
           </select>
-          <select
-            name="station"
-            id="station"
-            onChange={(e) => setDestination(e.target.value)}
-          >
-            <option value="">All Destinations</option>
+          <select name='station' id='station' onChange={(e) => setDestination(e.target.value)}>
+            <option value=''>All Destinations</option>
             {allDestinations.map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>
             ))}
           </select>
-          <button
-            className="border border-gray-400 p-2 rounded hover:shadow-lg hover:bg-gray-200"
-            onClick={() => fetchAndProcess()}
-          >
+          <button className='border border-gray-400 p-2 rounded hover:shadow-lg hover:bg-gray-200' onClick={() => fetchAndProcess()}>
             Refresh
           </button>
         </div>
-        <div className="flex flex-col max-w-xl mx-auto gap-4 py-8 w-full justify-center">
+        <div className='flex flex-col max-w-xl mx-auto gap-4 py-8 w-full justify-center'>
           {routes.length === 0 && (
-            <div className="flex justify-center bg-white border border-t-4 border-t-gray-400 p-4 rounded-lg">
-              <span className="text-lg font-semibold">
-                No routes between your origin and destination
-              </span>
+            <div className='flex justify-center bg-white border border-t-4 border-t-gray-400 p-4 rounded-lg'>
+              <span className='text-lg font-semibold'>No routes between your origin and destination</span>
             </div>
           )}
           {routes.map((r) => (
@@ -119,5 +101,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
